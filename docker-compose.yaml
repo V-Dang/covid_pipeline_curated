@@ -1,0 +1,18 @@
+version: '3'
+services:
+  pyspark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./notebooks:/home/vivian/work         # binding local notebooks folder to container
+      - ~/.aws:/home/vivian/.aws:ro
+    # environment:
+    #   - AWS_ACCESS_KEY_ID=...
+    #   - AWS_SECRET_ACCESS_KEY=...
+    #   - AWS_DEFAULT_REGION=us-east-1
+    env_file:
+      - .env                                  # load environment variables (AWS, Jupyter token, etc.) from .env file
+    ports:
+      - 8888:8888
+    working_dir: /home/vivian/work            # set working directory in container
