@@ -7,11 +7,11 @@ The purpose of this project is to write a pyspark pipeline to incrementally load
 - Normalize nested JSON schema
 
 In part 1, API data is ingested into the raw data lake, orchestrated by Airflow:
-    - https://github.com/V-Dang/covid_pipeline
+- https://github.com/V-Dang/covid_pipeline
 
-Notes:
-https://hub.docker.com/r/jupyter/pyspark-notebook
-https://www.youtube.com/watch?v=ISD1RrOdn28
+## Appendix and Notes:
+- https://hub.docker.com/r/jupyter/pyspark-notebook
+- https://www.youtube.com/watch?v=ISD1RrOdn28
 
 Connecting to S3 bucket:
 - Extend pyspark image in Dockerfile
